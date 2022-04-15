@@ -1,0 +1,32 @@
+[2022-04-05 15:18:33,754] 172.20.0.1 requested http://localhost/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 0.01,  time: 2022-04-05T15:18:33Z,  ip: 172.20.0.1,  host: localhost,  params: {}, 
+[2022-04-05 19:25:51,268] 172.20.0.1 requested http://10.202.155.183/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 0.03,  time: 2022-04-05T19:25:51Z,  ip: 172.20.0.1,  host: 10.202.155.183,  params: {}, 
+[2022-04-05 19:25:57,475] 172.20.0.1 requested http://10.202.155.183/HNAP1/
+INFO in __init__: method: GET,  path: /HNAP1/,  status: 404,  duration: 0.02,  time: 2022-04-05T19:25:57Z,  ip: 172.20.0.1,  host: 10.202.155.183,  params: {}, 
+[2022-04-06 19:29:48,005] 172.20.0.1 requested http://10.202.155.183/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 9.22,  time: 2022-04-06T19:29:47Z,  ip: 172.20.0.1,  host: 10.202.155.183,  params: {}, 
+[2022-04-06 19:29:47,976] 172.20.0.1 requested http://10.202.155.183/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 9.21,  time: 2022-04-06T19:29:47Z,  ip: 172.20.0.1,  host: 10.202.155.183,  params: {}, 
+[2022-04-07 13:29:32,786] 172.20.0.1 requested http://localhost/welcome
+INFO in __init__: method: GET,  path: /welcome,  status: 200,  duration: 0.48,  time: 2022-04-07T13:29:32Z,  ip: 172.20.0.1,  host: localhost,  params: {}, 
+[2022-04-07 18:03:30,744] 172.20.0.1 requested http://10.202.155.183/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 0.04,  time: 2022-04-07T18:03:30Z,  ip: 172.20.0.1,  host: 10.202.155.183,  params: {}, 
+[2022-04-07 18:03:36,890] 172.20.0.1 requested http://10.202.155.183/HNAP1/
+INFO in __init__: method: GET,  path: /HNAP1/,  status: 404,  duration: 0.02,  time: 2022-04-07T18:03:36Z,  ip: 172.20.0.1,  host: 10.202.155.183,  params: {}, 
+[2022-04-10 18:11:14,346] 172.20.0.1 requested http://localhost/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 0.61,  time: 2022-04-10T18:11:14Z,  ip: 172.20.0.1,  host: localhost,  params: {}, 
+[2022-04-10 18:11:14,377] 172.20.0.1 requested http://localhost/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 0.02,  time: 2022-04-10T18:11:14Z,  ip: 172.20.0.1,  host: localhost,  params: {}, 
+[2022-04-10 19:53:15,993] 172.20.0.1 requested http://10.202.155.183/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 0.06,  time: 2022-04-10T19:53:15Z,  ip: 172.20.0.1,  host: 10.202.155.183,  params: {}, 
+[2022-04-10 19:53:22,264] 172.20.0.1 requested http://10.202.155.183/HNAP1/
+INFO in __init__: method: GET,  path: /HNAP1/,  status: 404,  duration: 0.01,  time: 2022-04-10T19:53:22Z,  ip: 172.20.0.1,  host: 10.202.155.183,  params: {}, 
+[2022-04-11 23:09:50,529] 172.20.0.1 requested http://localhost/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 0.3,  time: 2022-04-11T23:09:50Z,  ip: 172.20.0.1,  host: localhost,  params: {}, 
+[2022-04-12 12:50:34,803] 172.20.0.1 requested http://localhost/welcome
+INFO in __init__: method: GET,  path: /welcome,  status: 200,  duration: 0.87,  time: 2022-04-12T12:50:34Z,  ip: 172.20.0.1,  host: localhost,  params: {}, 
+[2022-04-12 12:50:43,841] 172.20.0.1 requested http://localhost/welcome
+INFO in __init__: method: GET,  path: /welcome,  status: 200,  duration: 0.01,  time: 2022-04-12T12:50:43Z,  ip: 172.20.0.1,  host: localhost,  params: {}, 
+[2022-04-12 13:39:39,775] 172.20.0.1 requested http://localhost/
+INFO in __init__: method: GET,  path: /,  status: 200,  duration: 0.05,  time: 2022-04-12T13:39:39Z,  ip: 172.20.0.1,  host: localhost,  params: {}, 
