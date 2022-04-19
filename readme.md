@@ -1,4 +1,4 @@
-Hello, my name is Jake Nhan!
+Hello, my name is Jake Nhan.
 
 # Project Setup
 
