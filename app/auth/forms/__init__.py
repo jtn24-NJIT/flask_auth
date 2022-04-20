@@ -2,7 +2,6 @@ from flask_wtf import FlaskForm
 from wtforms import validators
 from wtforms.fields import *
 
-
 class login_form(FlaskForm):
     email = EmailField('Email Address', [
         validators.DataRequired(),
