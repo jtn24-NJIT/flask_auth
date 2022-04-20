@@ -37,7 +37,7 @@ def configure_logging():
     log = logging.getLogger("myApp")
     log.info("My App Logger")
     log = logging.getLogger("myerrors")
-    log.info("THis broke")
+    log.info("This broke")
 
 
 
