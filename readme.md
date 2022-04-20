@@ -1,4 +1,4 @@
-Hello, my name is Jake T. Nhan.
+Hello, my name is Jake Tyler Nhan. This is the repo  for the third project of IS 218, SEC. 004.
 
 # Project Setup
 
