@@ -1,24 +1,20 @@
 from datetime import datetime
 
-from flask_login import UserMixin
+from sqlalchemy import Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
-
 from app.db import db
-
+from flask_login import UserMixin
 
 class Song(db.Model):
     __tablename__ = 'songs'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(300), nullable=True, unique=False)
-    artist = db.Column(db.String(300), nullable=True, unique=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     user = relationship("User", back_populates="songs")
 
-    #add fields to the constructor to make them on create
-    def __init__(self, title, artist):
+    def __init__(self, title):
         self.title = title
-        self.artist = artist
 
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
@@ -60,3 +56,5 @@ class User(UserMixin, db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.email
+
+
