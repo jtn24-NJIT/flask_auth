@@ -728,3 +728,7 @@
 2022-04-21 15:20:28,050 [INFO] myApp: My App Logger
 2022-04-21 15:20:28,542 [INFO] myApp: ExampleTitle
 2022-04-21 15:20:28,542 [INFO] myApp: Some Random Song
+2022-04-21 16:18:41,867 [INFO] myApp: <User 'jtn24@njit.edu'>
+2022-04-21 16:19:51,442 [INFO] myApp: <User 'jtn24@njit.edu'>
+2022-04-21 16:22:37,406 [INFO] myApp: <User 'jtn24@njit.edu'>
+2022-04-21 16:24:11,180 [INFO] myApp: <User 'jtn24@njit.edu'>

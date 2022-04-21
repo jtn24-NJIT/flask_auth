@@ -2,17 +2,11 @@ import logging
 from logging.config import dictConfig
 
 import flask
-from flask import request, current_app
+from flask import request
 
 from app.logging_config.log_formatters import RequestFormatter
 
 log_con = flask.Blueprint('log_con', __name__)
-
-
-#@log_con.before_app_request
-#def before_request_logging():
-
-
 
 @log_con.after_app_request
 def after_request_logging(response):
