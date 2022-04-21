@@ -4,3 +4,35 @@
 2022-04-20 03:04:28,273 [INFO] werkzeug: 172.20.0.1 - - [20/Apr/2022 03:04:28] "GET / HTTP/1.1" 200 -
 2022-04-20 03:04:29,228 [INFO] werkzeug: 172.20.0.1 - - [20/Apr/2022 03:04:29] "GET /register HTTP/1.1" 200 -
 2022-04-20 03:04:29,944 [INFO] werkzeug: 172.20.0.1 - - [20/Apr/2022 03:04:29] "GET /login HTTP/1.1" 200 -
+2022-04-20 18:45:32,183 [INFO] werkzeug: 172.20.0.1 - - [20/Apr/2022 18:45:32] "GET / HTTP/1.1" 200 -
+2022-04-20 18:45:38,452 [INFO] werkzeug: 172.20.0.1 - - [20/Apr/2022 18:45:38] "[33mGET /HNAP1/ HTTP/1.1[0m" 404 -
+2022-04-20 21:26:28,793 [INFO] werkzeug: 172.20.0.1 - - [20/Apr/2022 21:26:28] "GET / HTTP/1.1" 200 -
+2022-04-20 21:26:29,806 [INFO] werkzeug: 172.20.0.1 - - [20/Apr/2022 21:26:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-20 23:20:37,283 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:37] "GET / HTTP/1.1" 200 -
+2022-04-20 23:20:37,809 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-20 23:20:40,770 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:40] "GET /about HTTP/1.1" 200 -
+2022-04-20 23:20:41,770 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:41] "GET /welcome HTTP/1.1" 200 -
+2022-04-20 23:20:42,674 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:42] "GET /register HTTP/1.1" 200 -
+2022-04-20 23:20:43,356 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:43] "GET /login HTTP/1.1" 200 -
+2022-04-20 23:20:44,669 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:44] "GET /welcome HTTP/1.1" 200 -
+2022-04-20 23:20:51,588 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:51] "[33mGET /DNE HTTP/1.1[0m" 404 -
+2022-04-20 23:20:54,070 [INFO] werkzeug: 172.19.0.1 - - [20/Apr/2022 23:20:54] "GET / HTTP/1.1" 200 -
+2022-04-21 14:28:45,285 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:28:45] "GET / HTTP/1.1" 200 -
+2022-04-21 14:28:47,237 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:28:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-21 14:29:37,832 [INFO] werkzeug:  * Detected change in '/home/myuser/app/db/models/__init__.py', reloading
+2022-04-21 14:31:42,718 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:31:42] "GET /about HTTP/1.1" 200 -
+2022-04-21 14:31:43,443 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:31:43] "GET /welcome HTTP/1.1" 200 -
+2022-04-21 14:39:21,625 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/config_test.py', reloading
+2022-04-21 14:57:26,401 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:57:26] "GET / HTTP/1.1" 200 -
+2022-04-21 14:57:26,471 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:57:26] "GET / HTTP/1.1" 200 -
+2022-04-21 14:57:26,857 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:57:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-21 14:57:29,373 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:57:29] "GET /register HTTP/1.1" 200 -
+2022-04-21 14:57:31,857 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:57:31] "GET /login HTTP/1.1" 200 -
+2022-04-21 14:57:51,047 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/user_test.py', reloading
+2022-04-21 14:57:55,056 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:57:55] "GET /register HTTP/1.1" 200 -
+2022-04-21 14:58:25,747 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/user_test.py', reloading
+2022-04-21 14:58:59,236 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:58:59] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2022-04-21 14:58:59,269 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:58:59] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-04-21 14:58:59,271 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:58:59] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-04-21 14:58:59,383 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:58:59] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-21 14:58:59,468 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 14:58:59] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -

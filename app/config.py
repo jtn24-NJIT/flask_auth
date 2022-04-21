@@ -1,6 +1,5 @@
 import os
 
-
 class Config(object):
     DEBUG = False
     TESTING = False
@@ -26,4 +25,3 @@ class TestingConfig(Config):
     SQLALCHEMY_DATABASE_URI = "sqlite:///"
     SESSION_COOKIE_SECURE = False
     DEBUG = True
-
