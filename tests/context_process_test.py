@@ -1,3 +1,4 @@
+""" Testing context variables such as flask env & the copyright message """
 import datetime
 from os import getenv
 

@@ -1,6 +1,5 @@
 import os
 
-
 class Config(object):
     DEBUG = False
     TESTING = False
@@ -10,6 +9,7 @@ class Config(object):
     db_dir = "database/db.sqlite"
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.abspath(db_dir)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    UPLOAD_FOLDER = './uploads'
 
 
 class ProductionConfig(Config):
@@ -26,4 +26,3 @@ class TestingConfig(Config):
     SQLALCHEMY_DATABASE_URI = "sqlite:///"
     SESSION_COOKIE_SECURE = False
     DEBUG = True
-

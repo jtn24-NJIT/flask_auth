@@ -1,8 +1,4 @@
 """A simple flask web app"""
-import logging
-import os
-from logging.handlers import RotatingFileHandler
-
 import flask_login
 from flask import Flask
 from flask_bootstrap import Bootstrap5
@@ -17,6 +13,7 @@ from app.db.models import User
 from app.error_handlers import error_handlers
 from app.logging_config import log_con
 from app.simple_pages import simple_pages
+from app.songs import songs
 
 login_manager = flask_login.LoginManager()
 
@@ -46,13 +43,13 @@ def create_app():
     # these load functionality without a web interface
     app.register_blueprint(log_con)
     app.register_blueprint(error_handlers)
+    app.register_blueprint(songs)
     app.context_processor(utility_text_processors)
     # add command function to cli commands
     app.cli.add_command(create_database)
     app.cli.add_command(create_log_folder)
     db.init_app(app)
     # Run once at startup:
-
     return app
 
 
