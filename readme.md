@@ -1,4 +1,4 @@
-Hello, my name is Jake Tyler Nhan. This is the repo for the third project of IS 218, SEC. 004. In this project, there is a simple login system that also allows for uploading of csv music files.
+Hello, my name is Jake Tyler Nhan. This is the repo for the third project of IS 218, SEC. 004. of Spring 2022. In this project, there is a simple login system that also allows for uploading of csv music files.
 
 # Project Setup
 
@@ -17,16 +17,6 @@ Hello, my name is Jake Tyler Nhan. This is the repo for the third project of IS 
 The result of this will be that when you create a pull request to merge a branch to master, it will deploy to your
 heroku development app/dyno and when you merge or push to master on github, it will deploy the app to the production heroku
 app/dyno.
-
-#### Change GitHub Actions Workflows for Dev and Prod
-
-6. Change line 42 to have your docker repo address in: .github/workflows/prod.yml
-7. change lines 58 to have your heroku app name in: .github/workflows/prod.yml
-8. change line 59 to have your heroku email in: .github/workflows/prod.yml
-9. change line 31 to have your heroku app name in .github/workflows/dev.yml
-10. change line 32 to have your heroku email in .github/workflows/dev.yml
-11. Push code to your local repo and check for any errors and fix any errors that appear when the workflow is running. You can check the workflow in the
-    actions.
 
 ## Running Locally
 
