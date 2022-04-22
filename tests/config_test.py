@@ -3,9 +3,9 @@ def test_development_config(application):
     assert application.config['DEBUG']
     assert not application.config['TESTING']
     # Use for github
-    assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:////home/runner/work/flask_auth/flask_auth/database/db.sqlite'
+    # assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:////home/runner/work/flask_auth/flask_auth/database/db.sqlite'
     # Use for local/pycharm test
-    # assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:////home/myuser/database/db.sqlite'
+    assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:////home/myuser/database/db.sqlite'
 
 
 def test_testing_config(application):
@@ -20,6 +20,6 @@ def test_production_config(application):
     assert not application.config['DEBUG']
     assert not application.config['TESTING']
     # Use for github
-    assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:////home/runner/work/flask_auth/flask_auth/database/db.sqlite'
+    # assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:////home/runner/work/flask_auth/flask_auth/database/db.sqlite'
     # Use for local/pycharm test
-    # assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:////home/myuser/database/db.sqlite'
+    assert application.config['SQLALCHEMY_DATABASE_URI'] == 'sqlite:////home/myuser/database/db.sqlite'
