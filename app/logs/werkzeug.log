@@ -144,3 +144,7 @@
 2022-04-21 16:36:30,913 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 16:36:30] "[36mGET /songs/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 2022-04-21 16:36:30,971 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 16:36:30] "[36mGET /songs/upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 2022-04-21 16:38:30,036 [INFO] werkzeug:  * Detected change in '/home/myuser/app/songs/__init__.py', reloading
+2022-04-21 20:53:20,235 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 20:53:20] "GET / HTTP/1.1" 200 -
+2022-04-21 20:53:20,948 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 20:53:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-21 20:53:23,331 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 20:53:23] "GET /songs HTTP/1.1" 200 -
+2022-04-21 20:53:24,306 [INFO] werkzeug: 172.19.0.1 - - [21/Apr/2022 20:53:24] "GET /songs/upload HTTP/1.1" 200 -
