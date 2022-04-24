@@ -1,13 +1,11 @@
 """This makes the test configuration setup"""
-# pylint: disable=redefined-outer-name
-import logging
 import os
 
 import pytest
 from app import create_app, User
 from app.db import db
 
-#this is a good tutorial I used to fix this code to do datbase testing.
+#this is a good tutorial I used to fix this code to do database testing.
 #https://xvrdm.github.io/2017/07/03/testing-flask-sqlalchemy-database-with-pytest/
 
 @pytest.fixture()
