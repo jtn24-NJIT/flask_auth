@@ -3,14 +3,7 @@
     <div class="row">
         <article class="col-12">
             <h1>Welcome to my website!</h1>
-            <br> Hello! My name is Jake Tyler Nhan. I am a senior student at NJIT majoring in Computer Science. What initially
-            got me into the major was an interest in game development, as well as my father encouraging me to get into it due to his
-            job as a principle software engineer at L3 Harris (a military tech company that I interned at in the summer of 2021, as well as
-            plan to work at following my graduation). My favorite subjects are history and mathematics, but I have also taken a liking to
-            web development due in part to having a long history of using many websites to play flash games and talk with friends. Upon
-            this website, each webpage will detail a specific subject that is learned in IS 218 through the spring of 2022. See the
-            carousel images below to alternatively access each page rather than then navigation on the top.
-            <br>
+            {{ lipsum (n=5, html=True, min=20, max=100) }}
         </article>
     </div>
 {% endblock %}
