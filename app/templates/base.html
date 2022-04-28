@@ -41,6 +41,47 @@
                         {{ render_nav_item('map.map_locations','Map' ) }}
                         {{ render_nav_item('simple_pages.about','About') }}
                         {{ render_nav_item('simple_pages.welcome','Welcome') }}
+                        <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Other Information
+                            </a>
+
+                            <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for("simple_pages.show", page="Git")}}">Git </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for("simple_pages.show", page="Docker")}}">Docker </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for("simple_pages.show", page="Python_Flask")}}">Python/Flask </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for("simple_pages.show", page="Continuous_Integration_and_Deployment")}}">CICD </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for("simple_pages.show", page="Pylint")}}">Pylint </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for("simple_pages.show", page="Arrange_Act_Assert_Testing")}}">AAA Testing</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for("simple_pages.show", page="Object_Oriented_Programming")}}">OOP </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="{{ url_for("simple_pages.show", page="Solid")}}">SOLID </a>
+                                </li>
+
+                            </ul>
+                        </li>
                     </div>
                 </div>
                 <div class="navbar-nav d-flex">

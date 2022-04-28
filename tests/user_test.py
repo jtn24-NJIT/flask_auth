@@ -1,10 +1,12 @@
+"""
+This file is to test the users table
+"""
 import logging
-
 from app import db
 from app.db.models import User, Song
-from faker import Faker
 
 def test_adding_user(application):
+    """ Adding a test user to db """
     log = logging.getLogger("myApp")
     with application.app_context():
         assert db.session.query(User).count() == 0
