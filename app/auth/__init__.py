@@ -1,11 +1,9 @@
 import logging
-
 from flask import Blueprint, render_template, redirect, url_for, flash, current_app, abort
 from flask_login import login_user, login_required, logout_user, current_user
 from jinja2 import TemplateNotFound
 from sqlalchemy import select
 from werkzeug.security import generate_password_hash
-
 from app.auth.decorators import admin_required
 from app.auth.forms import login_form, register_form, profile_form, security_form, user_edit_form, create_user_form
 from app.db import db
@@ -75,23 +73,19 @@ def logout():
     logout_user()
     return redirect(url_for('auth.login'))
 
-
-
-
-
 @auth.route('/dashboard', methods=['GET'], defaults={"page": 1})
 @auth.route('/dashboard/<int:page>', methods=['GET'])
 @login_required
 def dashboard(page):
     page = page
     per_page = 1000
-    #pagination = Location.query.filter_by(users=current_user.id).paginate(page, per_page, error_out=False)
-    #pagination = Location.query.all(users=current_user.id).paginate(page, per_page, error_out=False)
+    pagination = Location.query.filter_by(users=current_user.id).paginate(page, per_page, error_out=False)
+    pagination = Location.query.all(users=current_user.id).paginate(page, per_page, error_out=False)
 
-    #pagination = db.session.query(Location, User).filter(location_user.location_id == Location.id,
-            #                                   location_user.user_id == User.id).order_by(Location.location_id).all()
+    pagination = db.session.query(Location, User).filter(location_user.location_id == Location.id,
+                                                location_user.user_id == User.id).order_by(Location.location_id).all()
 
-    #pagination = User.query.join(location_user).filter(location_user.user_id == current_user.id).paginate()
+    pagination = User.query.join(location_user).filter(location_user.user_id == current_user.id).paginate()
 
     data = Location.query.all()
 
@@ -126,10 +120,7 @@ def edit_account():
         return redirect(url_for('auth.dashboard'))
     return render_template('manage_account.html', form=form)
 
-
-
 #You should probably move these to a new Blueprint to clean this up.  These functions below are for user management
-
 @auth.route('/users')
 @login_required
 @admin_required
@@ -146,13 +137,11 @@ def browse_users():
     return render_template('browse.html', titles=titles, add_url=add_url, edit_url=edit_url, delete_url=delete_url,
                            retrieve_url=retrieve_url, data=data, User=User, record_type="Users")
 
-
 @auth.route('/users/<int:user_id>')
 @login_required
 def retrieve_user(user_id):
     user = User.query.get(user_id)
     return render_template('profile_view.html', user=user)
-
 
 @auth.route('/users/<int:user_id>/edit', methods=['POST', 'GET'])
 @login_required
