@@ -8,4 +8,5 @@ __pycache__
 .bash_history
 .env
 database
-logs
+logs!/app/.env
+!/.env.test
