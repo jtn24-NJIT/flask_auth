@@ -1,6 +1,6 @@
 """This makes the test configuration setup"""
+# pylint: disable=redefined-outer-name
 import os
-
 import pytest
 from app import create_app, User
 from app.db import db
@@ -27,14 +27,12 @@ def application():
 
 @pytest.fixture()
 def add_user(application):
+    """ Adding a user to the application's database """
     with application.app_context():
         #new record
         user = User('keith@webizly.com', 'testtest')
         db.session.add(user)
         db.session.commit()
-
-
-
 
 @pytest.fixture()
 def client(application):
