@@ -33,7 +33,7 @@ def register():
 
             msg = Message("Hello",
                           sender="from@example.com",
-                          recipients=["to@example.com"])
+                          recipients=[user.email])
 
             current_app.mail.send(msg)
             flash('Congratulations, you are now a registered user!', "success")
@@ -199,8 +199,3 @@ def delete_user(user_id):
     db.session.commit()
     flash('User Deleted', 'success')
     return redirect(url_for('auth.browse_users'), 302)
-
-
-
-
-
