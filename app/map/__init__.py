@@ -1,15 +1,13 @@
 import csv
-import json
-import logging
 import os
 from flask import Blueprint, render_template, abort, url_for, current_app, jsonify
 from flask_login import current_user, login_required
 from jinja2 import TemplateNotFound
+from werkzeug.utils import secure_filename, redirect
+
 from app.db import db
 from app.db.models import Location
 from app.songs.forms import csv_upload
-from werkzeug.utils import secure_filename, redirect
-from flask import Response
 
 map = Blueprint('map', __name__, template_folder='templates')
 
@@ -27,9 +25,7 @@ def browse_locations(page):
 
 @map.route('/locations_datatables/', methods=['GET'])
 def browse_locations_datatables():
-
     data = Location.query.all()
-
     try:
         return render_template('browse_locations_datatables.html',data=data)
     except TemplateNotFound:

@@ -21,10 +21,8 @@ class Config(object):
     MAIL_USE_SSL = False
     MAIL_DEFAULT_SENDER = os.getenv('MAIL_DEFAULT_SENDER','noreply@myapp.com')
 
-
 class ProductionConfig(Config):
     pass
-
 
 class DevelopmentConfig(Config):
     DEBUG = True
@@ -35,4 +33,3 @@ class TestingConfig(Config):
     SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
     SESSION_COOKIE_SECURE = False
     DEBUG = True
-

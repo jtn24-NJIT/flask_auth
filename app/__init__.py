@@ -1,5 +1,4 @@
 """A simple flask web app"""
-import logging
 import os
 
 import flask_login
@@ -22,9 +21,7 @@ from app.simple_pages import simple_pages
 from app.songs import songs
 
 mail = Mail()
-
 login_manager = flask_login.LoginManager()
-
 
 def create_app():
     """Create and configure an instance of the Flask application."""
