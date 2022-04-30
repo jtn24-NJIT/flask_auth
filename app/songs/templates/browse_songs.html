@@ -2,11 +2,9 @@
 {% from 'bootstrap5/table.html' import render_table %}
 {% from "bootstrap5/pagination.html" import render_pagination %}
 
-
 <div class="row col-8">
     {% block title %}Browse: {{ record_type }}{% endblock %}
     {% block content %}
-
         <a href="{{ url_for("songs.songs_upload") }}" class="btn col-3 mb-5 btn-info" role="button">Upload Songs</a>
 
         <h2>Browse: Songs</h2>
@@ -23,7 +21,6 @@
             });
 
             const data = null;
-
             const xhr = new XMLHttpRequest();
             xhr.withCredentials = true;
 
@@ -36,16 +33,7 @@
             xhr.open("GET", "https://theaudiodb.p.rapidapi.com/discography.php?s=coldplay");
             xhr.setRequestHeader("X-RapidAPI-Host", "theaudiodb.p.rapidapi.com");
             xhr.setRequestHeader("X-RapidAPI-Key", "8c55cd5ec4msha52585d64324642p12f37fjsne5db3e973cea");
-
             xhr.send(data);
-
-
         </script>
-
-
-
     {% endblock %}
 </div>
-
-
-

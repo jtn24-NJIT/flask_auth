@@ -2,8 +2,8 @@ import logging
 from flask import Blueprint, render_template, redirect, url_for, flash, current_app, abort
 from flask_login import login_user, login_required, logout_user, current_user
 from jinja2 import TemplateNotFound
-from sqlalchemy import select
 from werkzeug.security import generate_password_hash
+
 from app.auth.decorators import admin_required
 from app.auth.forms import login_form, register_form, profile_form, security_form, user_edit_form, create_user_form
 from app.db import db
@@ -11,7 +11,6 @@ from app.db.models import User, Location, location_user
 from flask_mail import Message
 
 auth = Blueprint('auth', __name__, template_folder='templates')
-
 
 @auth.route('/register', methods=['POST', 'GET'])
 def register():
@@ -21,17 +20,21 @@ def register():
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user is None:
+            # If there isn't a user, add it to table here
             user = User(email=form.email.data, password=generate_password_hash(form.password.data), is_admin=0)
             db.session.add(user)
             db.session.commit()
+            # If this is the first user created, have it be an admin user
             if user.id == 1:
                 user.is_admin = 1
                 db.session.add(user)
                 db.session.commit()
 
-            msg = Message("Hello",
+            # Send email with Flask mail. Output/mail is captured by mail trap
+            msg = Message("Welcome to the site",
                           sender="from@example.com",
                           recipients=[user.email])
+            msg.body = "Welcome to the site"
 
             current_app.mail.send(msg)
             flash('Congratulations, you are now a registered user!', "success")
@@ -77,18 +80,9 @@ def logout():
 @auth.route('/dashboard/<int:page>', methods=['GET'])
 @login_required
 def dashboard(page):
-    page = page
-    per_page = 1000
-    #pagination = Location.query.filter_by(users=current_user.id).paginate(page, per_page, error_out=False)
-    #pagination = Location.query.all(users=current_user.id).paginate(page, per_page, error_out=False)
-
-    #pagination = db.session.query(Location, User).filter(location_user.location_id == Location.id,
-    #                                            location_user.user_id == User.id).order_by(Location.location_id).all()
-
-    #pagination = User.query.join(location_user).filter(location_user.user_id == current_user.id).paginate()
-
-    data = Location.query.all()
-
+    # Show location table and allow for export options
+    # If locations hasn't been uploaded, blank instead
+    data = current_user.locations
     try:
         return render_template('dashboard.html',data=data)
     except TemplateNotFound:
@@ -120,10 +114,10 @@ def edit_account():
         return redirect(url_for('auth.dashboard'))
     return render_template('manage_account.html', form=form)
 
-#You should probably move these to a new Blueprint to clean this up.  These functions below are for user management
 @auth.route('/users')
 @login_required
 @admin_required
+# Browse all users and allow for modification of them (account details, admin status, deletion)
 def browse_users():
     data = User.query.all()
     titles = [('email', 'Email'), ('registered_on', 'Registered On')]
@@ -131,17 +125,17 @@ def browse_users():
     edit_url = ('auth.edit_user', [('user_id', ':id')])
     add_url = url_for('auth.add_user')
     delete_url = ('auth.delete_user', [('user_id', ':id')])
-
     current_app.logger.info("Browse page loading")
-
     return render_template('browse.html', titles=titles, add_url=add_url, edit_url=edit_url, delete_url=delete_url,
                            retrieve_url=retrieve_url, data=data, User=User, record_type="Users")
+
 
 @auth.route('/users/<int:user_id>')
 @login_required
 def retrieve_user(user_id):
     user = User.query.get(user_id)
     return render_template('profile_view.html', user=user)
+
 
 @auth.route('/users/<int:user_id>/edit', methods=['POST', 'GET'])
 @login_required
