@@ -16,10 +16,6 @@ def test_adding_user(application):
         user = User('keith@webizly.com', 'testtest', 1)
         #add it to get ready to be committed
         db.session.add(user)
-        #call the commit
-        #db.session.commit()
-        #assert that we now have a new user
-        #assert db.session.query(User).count() == 1
         #finding one user record by email
         user = User.query.filter_by(email='keith@webizly.com').first()
         log.info(user)
