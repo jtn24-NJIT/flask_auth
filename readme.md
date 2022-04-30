@@ -1,4 +1,4 @@
-Hello, my name is Jake Tyler Nhan and this is the repository for my website. I am a fourth year student at NJIT, majoring in Computer Science for a Bachelor's degree. This is the repo for the third project of IS 218, SEC. 004 of Spring 2022. In this project, there is a simple login system that also allows for uploading of csv music files.
+Hello, my name is Jake Tyler Nhan. I am a fourth year student at NJIT, majoring in Computer Science for a Bachelor's degree. This is the repo for the third project of IS 218, SEC. 004 of Spring 2022. In this project, there is a simple login system that also allows for uploading of csv music files.
 
 # Project Setup
 
